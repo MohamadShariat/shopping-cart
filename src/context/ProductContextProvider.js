@@ -1,11 +1,11 @@
 import React, { useState, useEffect, createContext } from "react";
 
-//API
+//*API
 import { getProducts } from "../services/api";
 
-const ProductsContext = createContext();
+export const ProductsContext = createContext();
 
-const ProductContextProvider = (props) => {
+const ProductContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const ProductContextProvider = (props) => {
 
   return (
     <ProductsContext.Provider value={products}>
-      {props.chidren}
+      {children}
     </ProductsContext.Provider>
   );
 };
