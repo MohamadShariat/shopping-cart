@@ -1,11 +1,11 @@
 import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-//*components
+//* components
 import Store from "./components/Store";
 import ProductDetails from "./components/ProductDetails";
 
-//*Context
+//* Context
 import ProductContextProvider from "./context/ProductContextProvider";
 import CartContextProvider from "./context/CartContextProvider";
 

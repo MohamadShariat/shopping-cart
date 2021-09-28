@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 
-//*API
+//* API
 import { getProducts } from "../services/api";
 
 export const ProductsContext = createContext();

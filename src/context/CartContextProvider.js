@@ -13,7 +13,7 @@ const cartReducer = (state, action) => {
       if (!state.selectedItems.find((item) => item.id === action.payload.id)) {
         state.selectedItems.push({
           ...action.payload,
-          quantitiy: 1,
+          quantity: 1,
         });
       }
       return {
@@ -27,14 +27,14 @@ const cartReducer = (state, action) => {
       );
       return {
         ...state,
-        selectedItems: [newSelectedItems],
+        selectedItems: [...newSelectedItems],
       };
 
     case "INCREASE":
       const indexI = state.selectedItems.findIndex(
         (item) => item.id === action.payload.id
       );
-      state.selectedItems[indexI].quantitiy++;
+      state.selectedItems[indexI].quantity++;
       return {
         ...state,
       };
@@ -43,7 +43,7 @@ const cartReducer = (state, action) => {
       const indexD = state.selectedItems.findIndex(
         (item) => item.id === action.payload.id
       );
-      state.selectedItems[indexD].quantitiy--;
+      state.selectedItems[indexD].quantity--;
       return {
         ...state,
       };
