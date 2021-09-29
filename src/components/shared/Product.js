@@ -8,7 +8,7 @@ import { shorten, isInCart, quantityCount } from "../../helper/functions";
 import { CartContext } from "../../context/CartContextProvider";
 
 //* Icons
-import trashIcon from "../../assets/icons/trash.png";
+import trashIcon from "../../assets/icons/trash.svg";
 
 const Product = ({ productData }) => {
   //* here we take state and dispatch from CartContextProvider
